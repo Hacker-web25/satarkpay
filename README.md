@@ -80,7 +80,7 @@ Set `AI_MODEL` if you want a model other than the default for that provider.
 6. Open **Saathi**, tap the mic and say "कोई कह रहा है मैं डिजिटल अरेस्ट में हूँ" ("someone says I'm under digital arrest").
 
 ## For judges
-- Hosted demo: [DEMO URL] (on Render's free tier the first load after a quiet spell can take about a minute)
+- Hosted demo: https://satarkpay-rxmv.onrender.com (on Render's free tier the first load after a quiet spell can take about a minute)
 - Elder app: `/app` · Family guardian view: `/family` · Landing page: `/`
 - PayPal sandbox payer login: [SANDBOX PERSONAL EMAIL] / [PASSWORD]
 - Use **Reset demo data** on the family page to start fresh.
