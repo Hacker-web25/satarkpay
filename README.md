@@ -26,11 +26,14 @@ Elder app ──► POST /api/payments ──► risk engine (rules + AI) ──
                                                                 + account added to shared blocklist
 ```
 
+- **PayPal JavaScript SDK (Buttons):** she approves the payment in PayPal's own checkout.
 - **PayPal Orders v2:** orders are created with `intent: AUTHORIZE`, so the money is reserved, not sent.
 - **PayPal Payments v2:** `capture` releases a held payment; `void` cancels it.
 - **PayPal Payouts v1:** after capture, सतर्कPay pays the person she meant to pay.
 - **AI risk explainer (`lib/risk.js`):** explainable signals (new payee, amount vs her usual payments, "a caller asked me to pay", scam words, impersonating an authority, secrecy, accounts other families blocked). A language model then writes the explanation she hears, in Hindi and English, and can adjust the score by ±15.
-- **Saathi (`lib/saathi.js`):** an assistant limited to scams and safe payments, written for people in their 60s–80s. Short sentences, read aloud, always ending with one safe next step. Voice input uses the browser's speech recognition (hi-IN or en-IN). When a payment is held, Saathi already knows its details.
+- **AI model:** NVIDIA NIM, `nvidia/nemotron-3.5-super-vl-120b-a12b` (Nemotron 3.5 Super VL), with automatic fallback to other NVIDIA Nemotron models. `npm run pick-model` tests them on a Hindi scam question and saves the fastest one that answers in Hindi.
+- **Saathi (`lib/saathi.js`):** an assistant limited to scams and safe payments, written for people in their 60s–80s. Short sentences, read aloud, always ending with one safe next step. Voice input uses the browser's speech recognition (hi-IN or en-IN). When a payment is held, Saathi already knows its details. New answers are saved to a learning memory (`lib/memory.js`), so common questions are answered instantly.
+- **Sponsor tool, Render:** the app is deployed on Render from `render.yaml` (Blueprint), at https://satarkpay-rxmv.onrender.com.
 
 ## Saathi learns
 
