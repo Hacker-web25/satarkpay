@@ -1,0 +1,25 @@
+{
+  "name": "satarkpay",
+  "version": "1.0.0",
+  "description": "सतर्कPay: an AI payment guardian that holds risky PayPal payments for family approval",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --env-file=.env server.js",
+    "teach": "node --env-file=.env scripts/teach.js",
+    "pick-model": "node --env-file=.env scripts/pick-model.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}

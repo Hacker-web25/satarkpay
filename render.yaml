@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: satarkpay
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: PAYPAL_ENV
+        value: sandbox
+      - key: PAYPAL_CURRENCY
+        value: USD
+      - key: AI_MODEL
+        value: nvidia/nemotron-3.5-super-vl-120b-a12b
+      - key: HOLD_ABOVE
+        value: "39"
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false

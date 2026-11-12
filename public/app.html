@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सतर्कPay — Kamla ji's app</title>
+<meta name="theme-color" content="#FBF6EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z' fill='%23C2410C'/%3E%3Crect x='11' y='10' width='3.4' height='11' rx='1.4' fill='%23FBF6EF'/%3E%3Crect x='17.6' y='10' width='3.4' height='11' rx='1.4' fill='%23FBF6EF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="elder.css">
+</head>
+<body data-size="1">
+<a class="skip" href="#view">Skip to content</a>
+<header class="top">
+  <a class="brand" href="/" aria-label="सतर्कPay home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z"/><rect x="11" y="10" width="3.4" height="11" rx="1.4"/><rect x="17.6" y="10" width="3.4" height="11" rx="1.4"/></svg>
+    <span><span class="dev">सतर्क</span>Pay</span>
+  </a>
+  <div class="prefs">
+    <div class="seg" role="group" aria-label="Language / भाषा">
+      <button type="button" data-lang="hi" aria-pressed="true" lang="hi">हिंदी</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">English</button>
+    </div>
+    <div class="seg" role="group" aria-label="Text size">
+      <button type="button" data-size="0" aria-pressed="false" aria-label="Small text">A</button>
+      <button type="button" data-size="1" aria-pressed="true" aria-label="Large text">A+</button>
+      <button type="button" data-size="2" aria-pressed="false" aria-label="Largest text">A++</button>
+    </div>
+  </div>
+</header>
+
+<main id="view" class="view">
+
+  <!-- HOME -->
+  <section class="screen" data-screen="home">
+    <p class="hello" data-t="hello"></p>
+    <p class="sub" data-t="homeSub"></p>
+    <div class="big-actions">
+      <button type="button" class="tile-btn primary" data-go="send">
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M3 12h14M12 5l7 7-7 7"/></svg>
+        <span data-t="sendMoney"></span>
+      </button>
+      <button type="button" class="tile-btn" data-open-saathi>
+        <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+        <span data-t="askSaathi"></span>
+      </button>
+    </div>
+    <div class="guardian-card">
+      <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M12 2 3 5.5V12c0 5.3 3.8 9.6 9 11 5.2-1.4 9-5.7 9-11V5.5Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+      <p data-t="guardianOn"></p>
+    </div>
+    <button type="button" class="link-btn" data-go="check" data-t="checkLink"></button>
+    <h2 class="list-title" data-t="recent"></h2>
+    <ul class="recent" id="recent"></ul>
+  </section>
+
+  <!-- SEND -->
+  <section class="screen" data-screen="send" hidden>
+    <button type="button" class="back" data-go="home"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span data-t="back"></span></button>
+    <h1 class="h1" data-t="sendTitle"></h1>
+    <form id="sendForm" class="form" novalidate>
+      <label class="field"><span data-t="fName"></span><input name="payeeName" autocomplete="off" required></label>
+      <label class="field"><span data-t="fEmail"></span><input name="payeeEmail" type="email" inputmode="email" autocomplete="off" required></label>
+      <label class="field"><span><span data-t="fAmount"></span> (<span class="cur">USD</span>)</span><input name="amount" type="number" inputmode="decimal" min="1" step="0.01" required></label>
+      <label class="field"><span data-t="fNote"></span><input name="note" autocomplete="off"></label>
+      <fieldset class="ask">
+        <legend data-t="callerQ"></legend>
+        <div class="yn">
+          <label><input type="radio" name="callerAsked" value="yes" required><span data-t="yes"></span></label>
+          <label><input type="radio" name="callerAsked" value="no"><span data-t="no"></span></label>
+        </div>
+      </fieldset>
+      <p class="form-error" id="formError" role="alert"></p>
+      <button class="cta" type="submit" data-t="continue"></button>
+    </form>
+    <div class="demo-fill">
+      <span data-t="tryDemo"></span>
+      <button type="button" data-fill="safe" data-t="demoSafe"></button>
+      <button type="button" data-fill="scam" data-t="demoScam"></button>
+    </div>
+  </section>
+
+  <!-- PAY WITH PAYPAL -->
+  <section class="screen" data-screen="pay" hidden>
+    <button type="button" class="back" data-go="send"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span data-t="back"></span></button>
+    <h1 class="h1" data-t="payTitle"></h1>
+    <div class="summary">
+      <p class="sum-amt" id="sumAmt"></p>
+      <p class="sum-to" id="sumTo"></p>
+      <p class="sum-note" id="sumNote"></p>
+    </div>
+    <p class="hint" data-t="payHint"></p>
+    <div id="paypalButtons" class="pp"></div>
+    <button type="button" class="cta" id="demoPay" hidden data-t="demoPay"></button>
+    <p class="demo-note" id="demoNote" hidden data-t="demoNote"></p>
+  </section>
+
+  <!-- STATUS -->
+  <section class="screen" data-screen="status" hidden>
+    <div class="state" id="state"></div>
+  </section>
+
+  <!-- CHECK -->
+  <section class="screen" data-screen="check" hidden>
+    <button type="button" class="back" data-go="home"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span data-t="back"></span></button>
+    <h1 class="h1" data-t="checkTitle"></h1>
+    <form id="checkForm" class="form">
+      <label class="field"><span data-t="checkLabel"></span><input id="checkQ" autocomplete="off" spellcheck="false"></label>
+      <button class="cta" type="submit" data-t="checkBtn"></button>
+    </form>
+    <div id="checkOut" aria-live="polite"></div>
+  </section>
+</main>
+
+<!-- SAATHI -->
+<div class="saathi" id="saathi" role="dialog" aria-modal="true" aria-labelledby="saathiTitle" hidden>
+  <div class="s-head">
+    <div class="s-who"><span class="s-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2 3 5.5V12c0 5.3 3.8 9.6 9 11 5.2-1.4 9-5.7 9-11V5.5Z"/></svg></span><div><h2 id="saathiTitle" data-t="saathiName"></h2><p data-t="saathiSub"></p></div></div>
+    <label class="speak-toggle"><input type="checkbox" id="autoSpeak" checked><span data-t="autoSpeak"></span></label>
+    <button type="button" class="close" id="saathiClose" aria-label="Close"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="s-body" id="sBody" aria-live="polite"></div>
+  <div class="s-chips" id="sChips"></div>
+  <form class="s-input" id="sForm">
+    <button type="button" class="mic" id="mic" aria-label="Speak"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+    <label class="sr" for="sText" data-t="typeHere"></label>
+    <input id="sText" autocomplete="off">
+    <button type="submit" class="send" aria-label="Send"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+  </form>
+  <p class="s-listening" id="listening" hidden data-t="listening"></p>
+</div>
+
+<footer class="foot"><span data-t="footHelp"></span> <a href="/family" data-t="familyLink"></a></footer>
+
+<script type="module" src="elder.js"></script>
+</body>
+</html>

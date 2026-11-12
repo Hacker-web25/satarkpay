@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सतर्कPay — Family guardian</title>
+<meta name="theme-color" content="#070B14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z' fill='%23FF7A1A'/%3E%3Crect x='11' y='10' width='3.4' height='11' rx='1.4' fill='%23070B14'/%3E%3Crect x='17.6' y='10' width='3.4' height='11' rx='1.4' fill='%23070B14'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Mukta:wght@400;600&display=swap">
+<link rel="stylesheet" href="family.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/" aria-label="सतर्कPay home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z"/><rect x="11" y="10" width="3.4" height="11" rx="1.4"/><rect x="17.6" y="10" width="3.4" height="11" rx="1.4"/></svg>
+    <span><span class="dev">सतर्क</span>Pay</span>
+  </a>
+  <div class="who"><span class="avatar" aria-hidden="true">R</span><div><strong>Rahul</strong><span>Guardian for Maa (Kamla Sharma)</span></div></div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="pendingTitle">
+    <div class="sec-head"><h1 id="pendingTitle">Waiting for you</h1><span class="live"><i></i>Live</span></div>
+    <div id="pending" class="pending" aria-live="polite"></div>
+  </section>
+
+  <div class="grid">
+    <section aria-labelledby="actTitle">
+      <h2 id="actTitle">Maa's payments</h2>
+      <ul id="activity" class="activity"></ul>
+    </section>
+    <section aria-labelledby="flagTitle">
+      <h2 id="flagTitle">Accounts families have blocked</h2>
+      <p class="muted small">Every block you make is shared, so the same account is caught for the next family.</p>
+      <ul id="flagged" class="flagged"></ul>
+    </section>
+    <section aria-labelledby="memTitle">
+      <h2 id="memTitle">What Saathi has learned</h2>
+      <p class="muted small" id="memory">Saathi saves every new answer, so the next person who asks gets it instantly.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <span>Built for the PayPal AI Hackathon 2026.</span>
+  <a href="/app">Open Maa's app</a>
+  <button type="button" id="reset" class="linkish">Reset demo data</button>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+<script type="module" src="family.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>सतर्कPay — stop the scam before the money leaves</title>
+<meta name="description" content="सतर्कPay holds a risky payment for a moment, explains the danger in plain words, and lets someone you trust say yes or no.">
+<meta name="theme-color" content="#070B14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z' fill='%23FF7A1A'/%3E%3Crect x='11' y='10' width='3.4' height='11' rx='1.4' fill='%23070B14'/%3E%3Crect x='17.6' y='10' width='3.4' height='11' rx='1.4' fill='%23070B14'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Mukta:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/" } }
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="gl-fallback" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="सतर्कPay home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z" fill="var(--ember)"/><rect x="11" y="10" width="3.4" height="11" rx="1.4" fill="var(--ink)"/><rect x="17.6" y="10" width="3.4" height="11" rx="1.4" fill="var(--ink)"/></svg>
+      <span class="brand-word"><span class="hi">सतर्क</span>Pay</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#journey-start">See it work</a>
+      <a href="#check">Check a payment</a>
+      <a href="#elders">For elders</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="/app">Open the app</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ JOURNEY: hero + pinned story ============ -->
+<section class="journey" id="journey-start" aria-label="How सतर्कPay stops a digital arrest scam">
+  <div class="journey-inner">
+    <div class="copy-col">
+      <div class="layer hero-copy" data-layer="0">
+        <h1 class="hero-title">
+          <span class="line"><span>Stop the scam</span></span>
+          <span class="line"><span>before the money</span></span>
+          <span class="line"><span>leaves.</span></span>
+        </h1>
+        <p class="lead">सतर्कPay holds a risky payment for a moment, explains the danger in plain words, and lets someone you trust say yes or no.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#story-1" data-scroll-step="1">Watch it stop a scam</a>
+          <a class="btn btn-ghost" href="/app">Open the app</a>
+        </div>
+        <p class="fact">Indians lost <strong>₹22,845 crore</strong> to cyber fraud in 2024.<span class="fact-src">Ministry of Home Affairs, Lok Sabha reply</span></p>
+      </div>
+
+      <article class="layer step" data-layer="1" id="story-1">
+        <p class="step-time">11:02 AM</p>
+        <h2>Kamla ji, 68, is told she is under "digital arrest".</h2>
+        <p>A man in uniform on a video call says her Aadhaar is linked to a crime. She must not hang up, tell no one, and transfer her savings for "verification".</p>
+        <p class="aside">There is no such thing as a digital arrest under Indian law. Scammers count on people not knowing that.</p>
+      </article>
+
+      <article class="layer step" data-layer="2">
+        <p class="step-time">11:09 AM</p>
+        <h2>She presses pay. The money doesn't move.</h2>
+        <p>सतर्कPay puts the payment on hold instead of sending it. Until a person she trusts approves it, not one rupee leaves her account.</p>
+      </article>
+
+      <article class="layer step" data-layer="3">
+        <p class="step-time">11:09 AM</p>
+        <h2>It explains the danger in her language.</h2>
+        <p>The AI reads who she is paying, how much, the note, and her history. Then it tells her, in Hindi and out loud, why this looks like a scam.</p>
+      </article>
+
+      <article class="layer step" data-layer="4">
+        <p class="step-time">11:10 AM</p>
+        <h2>The scammer said tell no one. सतर्कPay tells her son.</h2>
+        <p>Rahul gets one message with the reason in a single line. He taps Block payment from his office in Pune.</p>
+      </article>
+
+      <article class="layer step" data-layer="5">
+        <p class="step-time">11:10 AM</p>
+        <h2>Her savings are still hers.</h2>
+        <p>The hold is cancelled, ₹2,40,000 stays in her account, and the account she almost paid is flagged for every other family.</p>
+        <a class="btn btn-ghost" href="/app">Try the real app</a>
+      </article>
+
+      <ol class="rail" aria-label="Story progress">
+        <li><span></span>The call</li>
+        <li><span></span>On hold</li>
+        <li><span></span>Explained</li>
+        <li><span></span>Family decides</li>
+        <li><span></span>Safe</li>
+      </ol>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="tilt">
+      <div class="phone-wrap">
+        <div class="phone main-phone">
+          <div class="notch"></div>
+          <div class="screen">
+
+            <!-- state: held (hero teaser) -->
+            <div class="scr scr-teaser">
+              <div class="pay-head"><span>Paying</span><strong class="amt">₹2,40,000</strong><span class="muted">to RBI Safe Custody A/c</span></div>
+              <div class="alert-card">
+                <div class="alert-top"><svg viewBox="0 0 24 24" class="ic"><path d="M12 2 3 5.5V12c0 5.3 3.8 9.6 9 11 5.2-1.4 9-5.7 9-11V5.5Z"/><path d="M10 8v7M14 8v7"/></svg><span>Payment on hold</span></div>
+                <p class="alert-big">This looks like a digital arrest scam.</p>
+                <p class="alert-small">Nothing has been sent. We've asked Rahul to check.</p>
+                <div class="alert-actions"><span class="pill-btn">Why?</span><span class="pill-btn solid">Cancel payment</span></div>
+              </div>
+            </div>
+
+            <!-- state 1: the call -->
+            <div class="scr scr-call">
+              <div class="call-top">
+                <div class="caller-av"><svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="9"/><path d="M8 44c2-9 8.5-14 16-14s14 5 16 14"/><rect x="17" y="26" width="14" height="5" rx="1.5" class="badge"/></svg></div>
+                <div><strong>"CBI Officer, Mumbai"</strong><span class="muted">Video call · 12:48</span></div>
+                <span class="live-dot"></span>
+              </div>
+              <div class="bubbles">
+                <p class="bubble">Your Aadhaar is linked to a money laundering case.</p>
+                <p class="bubble">You are under digital arrest. Do not disconnect this call.</p>
+                <p class="bubble warn">Transfer ₹2,40,000 for verification. It will be refunded in 2 hours.</p>
+                <p class="bubble me">Ji, I am sending it now.</p>
+              </div>
+            </div>
+
+            <!-- state 2: pay + hold -->
+            <div class="scr scr-pay">
+              <div class="pay-head"><span>Paying</span><strong class="amt">₹2,40,000</strong><span class="muted">to RBI Safe Custody A/c</span><span class="upi">rbisafecustody@okbank</span></div>
+              <div class="note">Note: verification refund</div>
+              <div class="slider"><span class="knob"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span><span class="slide-label">Slide to pay</span></div>
+              <div class="hold-overlay">
+                <div class="hold-ring"><svg viewBox="0 0 24 24" class="ic lg"><path d="M12 2 3 5.5V12c0 5.3 3.8 9.6 9 11 5.2-1.4 9-5.7 9-11V5.5Z"/><path d="M10 8v7M14 8v7"/></svg></div>
+                <p class="hold-title">Payment on hold</p>
+                <p class="hold-sub">Nothing has been sent.<br>सतर्कPay is checking this payment.</p>
+              </div>
+            </div>
+
+            <!-- state 3: explain -->
+            <div class="scr scr-explain">
+              <div class="risk">
+                <svg viewBox="0 0 120 120" class="risk-svg"><circle cx="60" cy="60" r="50" class="risk-bg"/><circle cx="60" cy="60" r="50" class="risk-arc"/></svg>
+                <div class="risk-num"><strong>96</strong><span>risk</span></div>
+              </div>
+              <ul class="signals">
+                <li>First payment ever to this account</li>
+                <li>Note says "verification refund"</li>
+                <li>30× her usual payment</li>
+                <li>She said a caller asked her to pay</li>
+              </ul>
+              <div class="hindi-explain">
+                <p lang="hi">यह धोखा लगता है। पुलिस, CBI या बैंक कभी भी फ़ोन पर पैसे नहीं माँगते।</p>
+                <span class="listen"><svg viewBox="0 0 24 24" class="ic"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>सुनिए</span>
+              </div>
+            </div>
+
+            <!-- state 5: safe -->
+            <div class="scr scr-safe">
+              <div class="safe-check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+              <p class="safe-title">₹2,40,000 is safe</p>
+              <p class="safe-sub">Rahul blocked this payment. The account has been reported.</p>
+              <div class="safe-row"><span>Balance</span><strong>₹3,12,450</strong></div>
+              <div class="safe-row"><span>Money sent</span><strong>₹0</strong></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="phone son-phone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="son-time">11:10</div>
+            <div class="notify">
+              <div class="notify-top"><svg viewBox="0 0 32 32" class="mini-mark"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z"/></svg><strong>सतर्कPay</strong><span class="muted">now</span></div>
+              <p><strong>Maa wants to send ₹2,40,000</strong> to a new account, "RBI Safe Custody A/c".</p>
+              <p class="notify-risk">Risk 96/100 · looks like a digital arrest scam</p>
+              <div class="notify-actions"><span class="nbtn block">Block payment</span><span class="nbtn">Approve</span></div>
+            </div>
+            <div class="son-done">Blocked. Maa's money is safe.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll to watch a scam get stopped</span><i></i></div>
+</section>
+
+<!-- ============ CHECKER ============ -->
+<section class="section check" id="check">
+  <div class="wrap check-grid">
+    <div class="check-copy reveal">
+      <h2 class="h2">Not sure about a payment? Check it first.</h2>
+      <p class="lead">Paste the UPI ID, link or phone number someone asked you to pay. You'll see what looks wrong, and why.</p>
+      <form class="check-form" id="checkForm" autocomplete="off">
+        <label for="checkInput" class="sr">UPI ID, link or phone number</label>
+        <div class="input-row">
+          <svg viewBox="0 0 24 24" class="ic in-ic" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          <input id="checkInput" name="q" type="text" placeholder="e.g. refund.helpdesk@ybl" spellcheck="false">
+          <button class="btn btn-primary" type="submit">Check</button>
+        </div>
+      </form>
+      <div class="examples" aria-label="Try an example">
+        <span class="ex-label">Try one:</span>
+        <button type="button" class="ex" data-ex="kyc.update.sbi@ybl">kyc.update.sbi@ybl</button>
+        <button type="button" class="ex" data-ex="http://sbi-kyc-verify.in/login">sbi-kyc-verify.in</button>
+        <button type="button" class="ex" data-ex="+91 98765 43210">+91 98765 43210</button>
+        <button type="button" class="ex" data-ex="sharmamedical@okhdfcbank">sharmamedical@okhdfcbank</button>
+      </div>
+    </div>
+    <div class="result card" id="result" aria-live="polite">
+      <div class="result-empty">
+        <svg viewBox="0 0 24 24" class="ic lg" aria-hidden="true"><path d="M12 2 3 5.5V12c0 5.3 3.8 9.6 9 11 5.2-1.4 9-5.7 9-11V5.5Z"/></svg>
+        <p>Your result shows up here, with every reason spelled out.</p>
+      </div>
+    </div>
+  </div>
+  <p class="wrap fine">Checks run against accounts that families on सतर्कPay have already blocked, plus warning signs in the ID or link itself.</p>
+</section>
+
+<!-- ============ ELDERS ============ -->
+<section class="section elders" id="elders">
+  <div class="wrap elders-grid">
+    <div class="elders-copy">
+      <h2 class="h2 reveal">Built for the people scammers call first.</h2>
+      <p class="hi-lead reveal" lang="hi">बड़े अक्षर। दो बटन। और परिवार बस एक टैप दूर।</p>
+      <p class="lead reveal">Big letters, two buttons, and family one tap away. Dada-Dadi mode removes everything a scared person could tap by mistake.</p>
+      <ul class="promise">
+        <li class="reveal"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M4 7V5h16v2M9 19h6M12 5v14"/></svg><div><strong>Big text, two buttons</strong><span>No menus to learn. Every warning ends in one clear, safe choice.</span></div></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg><div><strong>Speaks Hindi out loud</strong><span>Press सुनिए and the warning is read aloud, slowly.</span></div></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><div><strong>Saathi listens, in Hindi or English</strong><span>Press the mic and say what the caller told you. Saathi explains, slowly and out loud, and only talks about money safety.</span></div></li>
+        <li class="reveal"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17.5" cy="9" r="2.5"/><path d="M17 14.6c2.3.2 4 1.7 4.5 4.4"/></svg><div><strong>Family is one tap away</strong><span>A son, daughter or neighbour approves big or unusual payments.</span></div></li>
+      </ul>
+    </div>
+
+    <div class="elder-demo">
+      <div class="phone elder-phone" id="elderPhone" data-size="1" data-lang="hi">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="e-screen e-warn">
+            <div class="e-head"><svg viewBox="0 0 32 32" class="mini-mark"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z"/></svg><span>सतर्कPay</span></div>
+            <p class="e-stop" data-hi="रुकिए।" data-en="Wait.">रुकिए।</p>
+            <p class="e-main" data-hi="यह पैसा अभी नहीं गया है।" data-en="This money has not been sent yet.">यह पैसा अभी नहीं गया है।</p>
+            <p class="e-body" data-hi="फ़ोन करने वाले ने आपसे पैसे भेजने को कहा है। पुलिस, CBI या बैंक कभी भी फ़ोन पर पैसे नहीं माँगते।" data-en="Someone on a call asked you to send money. Police, CBI or banks never ask for money on a phone call.">फ़ोन करने वाले ने आपसे पैसे भेजने को कहा है। पुलिस, CBI या बैंक कभी भी फ़ोन पर पैसे नहीं माँगते।</p>
+            <button type="button" class="e-btn primary" data-act="family" data-hi="राहुल से पूछें" data-en="Ask Rahul">राहुल से पूछें</button>
+            <button type="button" class="e-btn" data-act="cancel" data-hi="पेमेंट रद्द करें" data-en="Cancel payment">पेमेंट रद्द करें</button>
+          </div>
+          <div class="e-screen e-done" hidden>
+            <div class="safe-check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
+            <p class="e-main e-done-text"></p>
+            <button type="button" class="e-reset" data-hi="फिर से देखें" data-en="Show again">फिर से देखें</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="elder-controls">
+        <div class="ctrl" role="group" aria-label="Text size">
+          <span class="ctrl-label">Text size</span>
+          <button type="button" class="seg" data-size="0" aria-pressed="false">A</button>
+          <button type="button" class="seg" data-size="1" aria-pressed="true">A+</button>
+          <button type="button" class="seg" data-size="2" aria-pressed="false">A++</button>
+        </div>
+        <div class="ctrl" role="group" aria-label="Language">
+          <span class="ctrl-label">Language</span>
+          <button type="button" class="seg" data-lang="hi" aria-pressed="true" lang="hi">हिंदी</button>
+          <button type="button" class="seg" data-lang="en" aria-pressed="false">English</button>
+        </div>
+        <button type="button" class="btn btn-primary listen-btn" id="listenBtn">
+          <svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          <span>Read it aloud</span>
+        </button>
+      </div>
+      <a class="btn btn-ghost" href="/app?saathi=1">Talk to Saathi, the voice assistant</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section how" id="how">
+  <div class="wrap">
+    <h2 class="h2 reveal">The money waits. The AI checks. A person decides.</h2>
+    <p class="lead reveal how-lead">Built on a payment pattern most people never see: money can be authorized now and captured later. Until it's captured, it doesn't move.</p>
+    <div class="how-track">
+      <svg class="how-line" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H1000"/></svg>
+      <ol class="how-steps">
+        <li class="reveal"><span class="how-n">1</span><h3>Hold</h3><p>The payment is created with intent to authorize. The money is reserved, not sent.</p><code>PayPal Orders v2 · AUTHORIZE</code></li>
+        <li class="reveal"><span class="how-n">2</span><h3>Check</h3><p>An AI model reads the payee, amount, note and payment history against known scam patterns, then scores and explains the risk.</p><code>Risk model + LLM explanation</code></li>
+        <li class="reveal"><span class="how-n">3</span><h3>Ask</h3><p>Everyday payments go straight through. Risky ones go to a trusted family member for a one-tap decision.</p><code>Trusted circle</code></li>
+        <li class="reveal"><span class="how-n">4</span><h3>Release or cancel</h3><p>Approved: the payment is captured. Blocked: the authorization is voided and nothing ever left.</p><code>Capture · Void · Webhooks</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINGERPRINTS ============ -->
+<section class="section scams" id="scams">
+  <div class="wrap">
+    <h2 class="h2 reveal">Different scripts. The same fingerprints.</h2>
+    <p class="lead reveal">Every scam needs urgency, secrecy, or a payment that can't come back. सतर्कPay looks for those fingerprints, so it catches scams nobody has reported yet.</p>
+    <div class="bento">
+      <article class="tile t-big reveal" tabindex="0">
+        <h3>Digital arrest</h3>
+        <p class="script">"You are under digital arrest. Do not disconnect."</p>
+        <p class="print"><span>Fingerprint</span>Video call, secrecy, and a "refundable" transfer to a new account.</p>
+      </article>
+      <article class="tile reveal" tabindex="0"><h3>Fake KYC update</h3><p class="script">"Your account will be blocked today."</p><p class="print"><span>Fingerprint</span>A link to a look-alike bank site.</p></article>
+      <article class="tile reveal" tabindex="0"><h3>Courier and customs</h3><p class="script">"Your parcel has illegal items in it."</p><p class="print"><span>Fingerprint</span>A "fee" to a personal UPI ID.</p></article>
+      <article class="tile reveal" tabindex="0"><h3>Part-time job tasks</h3><p class="script">"Earn ₹5,000 a day liking videos."</p><p class="print"><span>Fingerprint</span>Small payouts first, then a big deposit.</p></article>
+      <article class="tile reveal" tabindex="0"><h3>Stock tips groups</h3><p class="script">"Guaranteed 300% returns this month."</p><p class="print"><span>Fingerprint</span>Rising payments to one new payee.</p></article>
+      <article class="tile reveal" tabindex="0"><h3>"Sent by mistake"</h3><p class="script">"I sent you ₹10,000 by mistake, please return it."</p><p class="print"><span>Fingerprint</span>A refund for money that never arrived.</p></article>
+      <article class="tile t-wide reveal" tabindex="0"><h3>"Pay another way"</h3><p class="script">"This is faster with gift cards or crypto."</p><p class="print"><span>Fingerprint</span>Pressure to leave the protected payment. सतर्कPay treats the push itself as the warning.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY NOW ============ -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <p class="why-big reveal">India lost <span class="count" data-to="22845" data-prefix="₹" data-suffix=" crore">₹22,845 crore</span> to cyber fraud in 2024, about three times the year before.</p>
+    <div class="stats">
+      <div class="stat reveal"><strong class="count" data-to="3637288">36,37,288</strong><span>financial fraud incidents reported in 2024</span></div>
+      <div class="stat reveal"><strong class="count" data-to="123672">1,23,672</strong><span>digital arrest cases in 2024</span></div>
+      <div class="stat reveal"><strong class="count" data-to="1935" data-prefix="₹" data-suffix=" cr">₹1,935 cr</strong><span>lost to digital arrest scams in 2024</span></div>
+    </div>
+    <p class="fine">Sources: Ministry of Home Affairs reply in the Lok Sabha (NCRP and CFCFRMS data from I4C); CyberPeace analysis of MHA data for digital arrest figures.</p>
+
+    <div class="layers">
+      <div class="layer-card reveal"><h3>Families</h3><p>A guardian on the phones of the people you love. Set up a trusted circle in a minute.</p></div>
+      <div class="layer-card reveal"><h3>Banks and payment apps</h3><p>One API call to hold, check and confirm risky payments inside the apps people already use.</p></div>
+      <div class="layer-card reveal"><h3>A shared scam network</h3><p>Every blocked payment marks the account, so the next family is protected before the scammer calls.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="close" id="close">
+  <div class="wrap close-inner">
+    <svg class="close-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 6.5V15c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V6.5Z"/><rect x="11" y="10" width="3.4" height="11" rx="1.4"/><rect x="17.6" y="10" width="3.4" height="11" rx="1.4"/></svg>
+    <h2 class="close-title reveal">Scams need her to hurry.<br>सतर्कPay gives her a moment.</h2>
+    <div class="ctas center">
+      <a class="btn btn-primary" href="/app">Open the app</a>
+      <a class="btn btn-ghost" href="/family">See the family view</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="brand-word small"><span class="hi">सतर्क</span>Pay</span>
+    <span>Built for the PayPal AI Hackathon 2026 by Aryan Bansal.</span>
+    <span>Kamla ji and Rahul are an illustrative story. Not affiliated with any government agency.</span>
+    <a href="/app">Elder app</a>
+    <a href="/family">Family app</a>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
