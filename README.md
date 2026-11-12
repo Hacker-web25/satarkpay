@@ -82,7 +82,8 @@ Set `AI_MODEL` if you want a model other than the default for that provider.
 ## For judges
 - Hosted demo: https://satarkpay-rxmv.onrender.com (on Render's free tier the first load after a quiet spell can take about a minute)
 - Elder app: `/app` · Family guardian view: `/family` · Landing page: `/`
-- PayPal sandbox payer login: [SANDBOX PERSONAL EMAIL] / [PASSWORD]
+- PayPal sandbox payer (Kamla ji), used in the PayPal window: **kamla-ji@example.com** / **hK48_Q%O** (the last character is a capital letter O). This is a PayPal sandbox test account; no real money moves.
+- Quick test: on `/app` tap **Send money → "RBI Safe Custody" → Yes → Continue → Pay with PayPal**, log in with the account above and complete the payment. It is held. On `/family` tap **Block payment**: the PayPal authorization is voided and her app says her money is safe. The **"Medicine shop"** demo ($42) goes straight through (capture + payout).
 - Use **Reset demo data** on the family page to start fresh.
 - Amounts run in USD because the PayPal sandbox is used. The story on the landing page is set in India, where these scams are common.
 
